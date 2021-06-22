@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | test</title>
+    <link rel="shortcut icon" th:href="@{/webglstatic/TemplateData/favicon.ico}">
+    <link rel="stylesheet" th:href="@{/webglstatic/TemplateData/style.css}">
+    <script th:src="@{/webglstatic/TemplateData/UnityProgress.js}"></script>
+    <script th:src="@{/webglstatic/Build/UnityLoader.js}"></script>
+
+    <link rel="stylesheet" href="/home/css/bootstrap.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="/home/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="/home/css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="/home/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="/home/css/shortcode/responsive.css">
+    <!-- Style customizer (Remove these two lines please) -->
+    <link rel="stylesheet" href="/home/css/style-customizer.css">
+    <link href="#" data-style="styles" rel="stylesheet">
+
+    <!-- Modernizr JS -->
+    <script src="/home/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "/webglstatic/Build/smtWebGL.json", {onProgress: UnityProgress});
+    </script>
+</head>
+<body>
+<!--    <div class="webgl-content" style="top: 37%">-->
+<!--      <div id="unityContainer" style="width: 1600px; height: 700px"></div>-->
+<!--      <div class="footer">-->
+<!--        <div class="webgl-logo"></div>-->
+<!--        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>-->
+<!--        <div class="title">SMT车间生产过程建模</div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+<div class="" style="border: 0px solid blue;">
+
+    <div class="webgl-content" style="top: 37%">
+        <div id="unityContainer" style="width: 1600px; height: 700px"></div>
+        <div class="footer">
+            <div class="webgl-logo" style=""></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">SMT车间生产过程建模</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40%">
+
+        <div class="news-are"
+             style="border: 0px solid green;position: absolute;width: 500px; margin-left: 7%;margin-top: 2%;height: 545px">
+            <div class="news-img">
+                <img src="/webglstatic/images/1.png" width="">
+                <div class="news-date navy-bg">
+                </div>
+            </div>
+            <div class="img-text gray-bg" style="border: 0px solid yellow;height: 35vh;">
+                <h3><a href="#">业务建模</a></h3>
+                <p>业务建模工具主要包含对业务流程、业务场景、业务对象、业务数据和业务问题的定义与构建分析，帮助分析人员快速了解业务相关信息，从中找出业务痛点，分析出相关的业务问题。
+                </p>
+                <br>
+                <a class="button extra-small" href="business/index" style="border: 1px solid yellow;">
+                    <span>点击进入</span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="news-are mrg-xs"
+             style="border: 0px solid green;position: absolute;width: 500px; margin-left: 36.5%;margin-top: 2%;height: 545px">
+            <div class="news-img">
+                <img src="/home/images/9.jpg">
+                <div class="news-date navy-bg">
+                </div>
+            </div>
+            <div class="img-text gray-bg" style="border: 0px solid yellow;height: 35vh;">
+                <h3><a href="#">数据建模</a></h3>
+                <p>数据建模工具针对业务问题分析处理数据，涵盖了从数据产生、处理、应用的整个过程，包括感知、筛选、关联、索引、调用等阶段，支持全过程可视化展示，为分析建模奠定数据基础。</p>
+                <a class="button extra-small" href="data/index" style="border: 1px solid yellow;margin-top: 8%;">
+                    <span>点击进入</span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="news-are mrg-xs"
+             style="border: 0px solid green;position: absolute;width: 500px; margin-left: 66%;margin-top: 2%;height: 545px">
+            <div class="news-img">
+                <img src="/home/images/10.jpg">
+                <div class="news-date navy-bg">
+                </div>
+            </div>
+            <div class="img-text gray-bg" style="border: 0px solid yellow;height: 35vh;">
+                <h3><a href="#">分析建模</a></h3>
+                <p>分析建模模块包括分析流程、分析单元、模型构建、模型融合、分析调试和分析评估六个部分，支持了分析模型构建、运行计算、结果分析和可视化展示，完成对业务问题的全方位分析。
+                </p>
+                <br>
+                <a class="button extra-small" href="analyse/index" style="border: 1px solid yellow;margin-top: 2%;">
+                    <span>点击进入</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

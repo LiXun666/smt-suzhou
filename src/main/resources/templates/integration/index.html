@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            color: #000;
+        }
+
+        .main {
+            margin: 10px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 60px auto 20px auto;
+            text-align: center
+        }
+
+        .piclist ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            overflow: hidden
+        }
+
+        .piclist li {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            width: 25%;
+            float: left;
+            text-align: center;
+            line-height: 2
+        }
+
+        .piclist li > div {
+            margin: 10px;
+            background-color: #00CCCC;
+            color: #FFFFFF;
+            background-image: linear-gradient(150deg, #0066FF, #9acbf8);
+            border-radius: 15px;
+            padding-bottom: 30px;
+            overflow: hidden
+        }
+
+        .piclist li h4 {
+            margin-bottom: 0px;
+            font-size: 18px;
+        }
+
+        .piclist li img {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
+        }
+
+        .piclist li select {
+            display: inline-block;
+            height: 30px;
+            width: 100px;
+        }
+
+        .bnt {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .bnt a {
+            display: inline-block;
+            line-height: 35px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #0066FF;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px
+        }
+
+        .bnt a:hover {
+            background-color: #0066CC
+        }
+
+        a.dl {
+            display: inline-block;
+            margin-right: 10px;
+            color: #000;
+            line-height: 28px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #fff;
+            text-decoration: none;
+            border-radius: 5px
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div class="title">产线数字孪生与现场自动化集成</div>
+    <a href = "http://58.223.177.13:8086/ZT">
+        <div class="com-count-title" style="margin-left: 70%;margin-top: -1%">中央控制系统</div>
+    </a>
+    <div class="piclist">
+        <ul>
+
+            <li>
+                <div>
+                    <h4>印刷机</h4>
+                    <img src="images/img1.png">
+
+                    <a href="" class="dl">数据接入</a><select name="">
+                    <option value="1">数据库</option>
+                    <option value="2">文件</option>
+                    <option value="3">Kafka</option>
+                </select>
+
+                    <div class="bnt"><a href="">协议配置</a></div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h4>贴片机</h4>
+                    <img src="images/img2.png">
+
+                    <a href="" class="dl">数据接入</a><select name="">
+                    <option value="1">数据库</option>
+                    <option value="2">文件</option>
+                    <option value="3">Kafka</option>
+                </select>
+                    <div class="bnt"><a href="">协议配置</a></div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h4>回流焊</h4>
+                    <img src="images/img3.png">
+
+                    <a href="" class="dl">数据接入</a> <select name="">
+                    <option value="1">数据库</option>
+                    <option value="2">文件</option>
+                    <option value="3">Kafka</option>
+                </select>
+                    <div class="bnt"><a href="">协议配置</a></div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h4>检测机</h4>
+                    <img src="images/img4.png">
+
+                    <a href="" class="dl">数据接入</a> <select name="">
+                    <option value="1">数据库</option>
+                    <option value="2">文件</option>
+                    <option value="3">Kafka</option>
+                </select>
+                    <div class="bnt"><a href="">协议配置</a></div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="bnt" style="text-align:right; padding-right:30px;"><a href="">下一步</a></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <title>echarts大数据图表样式demo www.bootstrapmb.com</title>
+    <link rel="stylesheet" href="newPage/icon/iconfont.css">
+
+
+    <link rel="shortcut icon" th:href="@{/webglstatic/TemplateData/favicon.ico}">
+    <link rel="stylesheet" th:href="@{/webglstatic/TemplateData/style.css}">
+    <link href='newPage/css/test-1920.css' rel='stylesheet' type='text/css'>
+
+
+    <!--    <script src="js/jquery.min.js" type="text/javascript"></script>-->
+    <!--    <script src="js/echarts.min.js" type="text/javascript"></script>-->
+    <!--    &lt;!&ndash; 最新版本的 Bootstrap 核心 CSS 文件 &ndash;&gt;-->
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css" type='text/css'>-->
+    <!--    &lt;!&ndash; 最新的 Bootstrap 核心 JavaScript 文件 &ndash;&gt;-->
+    <!--    <script src="js/bootstrap.min.js" type="text/javascript"></script>-->
+
+</head>
+<body>
+<div class="container-header">
+    <ul class="nowTime">
+        <li></li>
+        <li></li>
+    </ul>
+<!--    <div class="location">-->
+<!--        <i class="icon iconfont icon-buoumaotubiao23"></i>-->
+<!--        <span class="areaName"></span>-->
+<!--    </div>-->
+    <h3>SMT车间生产过程建模</h3>
+    <a href = "http://58.223.177.13:8086/ZT">
+        <div class="com-count-title" style="margin-left: 70%;margin-top: -1%">中央控制系统</div>
+    </a>
+</div>
+
+<div class="container-content">
+    <div class="top">
+        <div class="count-base" style="height: 250px">
+            <div class="com-count-title">贴片机</div>
+            <div class="com-screen-content2">
+                <ul class="use-data">
+                    <li>
+                        <p class="data-count">28000 </p>
+                        <span class="data-name">贴装速度(p/h)</span>
+                    </li>
+                    <li>
+                        <p class="data-count" > 900</p>
+                        <span class="data-name">贴装高度(mm)</span>
+                    </li>
+                    <li>
+                        <p class="data-count">300*600</p>
+                        <span class="data-name">基板尺寸(mm*mm)</span>
+                    </li>
+                </ul>
+                <ul class="use-data" style="margin-top: 10%;">
+                    <li>
+                        <p class="data-count">2 </p>
+                        <span class="data-name">进板时间(s)</span>
+                    </li>
+                    <li>
+                        <p class="data-count"> 220</p>
+                        <span class="data-name">电压(V)</span>
+                    </li>
+                    <li>
+                        <p class="data-count" id="num1">200</p>
+                        <span class="data-name">产量(张)</span>
+                    </li>
+                </ul>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+        </div>
+        <div class="count-resource q1" style="height: 250px">
+            <div class="com-count-title">印刷机</div>
+            <div class="com-screen-content2">
+                <ul class="use-data">
+                    <li>
+                        <p class="data-count" id="num2">45</p>
+                        <span class="data-name">刮刀速度(mm/s)</span>
+                    </li>
+                    <li>
+                        <p class="data-count"> 8</p>
+                        <span class="data-name">刮刀压力(kg)</span>
+                    </li>
+                    <li>
+                        <p class="data-count">50</p>
+                        <span class="data-name">刮刀宽度(mm)</span>
+                    </li>
+                </ul>
+                <ul class="use-data" style="margin-top: 10%;">
+                    <li>
+                        <p class="data-count">0.07 </p>
+                        <span class="data-name">印刷间隙</span>
+                    </li>
+                    <li>
+                        <p class="data-count"> 3</p>
+                        <span class="data-name">脱模速度(mm/s)</span>
+                    </li>
+                    <li>
+                        <p class="data-count">220</p>
+                        <span class="data-name">电压(V)</span>
+                    </li>
+                </ul>
+                <div class="com-screen-content">
+                    <div id="main2" style="margin-top:10px;width:100%;height:240px;"></div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+        </div>
+        <div class="count-resource q2" style="height: 250px">
+            <div class="com-count-title">回炉焊</div>
+            <div class="com-screen-content2">
+                <ul class="use-data">
+                    <li>
+                        <p class="data-count">100 </p>
+                        <span class="data-name">最低温度(℃)</span>
+                    </li>
+                    <li>
+                        <p class="data-count"> 350</p>
+                        <span class="data-name">最高温度(℃)</span>
+                    </li>
+                    <li>
+                        <p class="data-count">100</p>
+                        <span class="data-name">最低-最高(s)</span>
+                    </li>
+                </ul>
+                <ul class="use-data" style="margin-top: 10%;">
+                    <li>
+                        <p class="data-count">2950 </p>
+                        <span class="data-name">加热区长度(mm)</span>
+                    </li>
+                    <li>
+                        <p class="data-count"> 900</p>
+                        <span class="data-name">传输高度(mm)</span>
+                    </li>
+                    <li>
+                        <p class="data-count">100</p>
+                        <span class="data-name">恒温时间(s)</span>
+                    </li>
+                </ul>
+                <div class="com-screen-content">
+                    <div id="main3" style="margin-top:10px;width:100%;height:240px;"></div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+</div>
+
+<div class="webgl-content" style="top: 68%">
+    <div id="unityContainer" style="width: 1400px; height: 550px"></div>
+    <div class="footer">
+        <div class="webgl-logo" style=""></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">SMT车间生产过程建模</div>
+    </div>
+</div>
+
+<script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script th:src="@{/webglstatic/TemplateData/UnityProgress.js}"></script>
+<script th:src="@{/webglstatic/Build/UnityLoader.js}"></script>
+
+<script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "/webglstatic/Build/smtWebGL.json", {onProgress: UnityProgress});
+</script>
+
+<script type="text/javascript">
+// <!--    if (window.screen.width >= 1600) {-->
+// <!--        document.write("<link href='newPage/css/test-1920.css' rel='stylesheet' type='text/css'>");-->
+//
+// <!--        document.writeln("<script type=\"text/javascript\" src=\"newPage/js/test-1920.js\"><\/script>");-->
+// <!--    }-->
+// <!--    else if (window.screen.width < 1600 && window.screen.width >= 1280) {-->
+// <!--        document.write("<link href='newPage/css/test-1280.css' rel='stylesheet' type='text/css'>");-->
+//
+// <!--        document.writeln("<script type=\"text/javascript\" src=\"newPage/js/test-1280.js\"><\/script>");-->
+// <!--    } else {-->
+// <!--        document.write("<link href='newPage/css/test-1024.css' rel='stylesheet' type='text/css'>");-->
+//
+// <!--        document.writeln("<script type=\"text/javascript\" src=\"newPage/js/test-1024.js\"><\/script>");-->
+// <!--    }-->
+
+
+    var num1 = document.getElementById('num1');
+    var num2 = document.getElementById('num2')
+    setInterval(function (){
+        num1.innerText = parseInt(200+Math.random()*100);
+        num2.innerText = parseInt(30+Math.random()*35);
+    },1500);
+</script>
+
+<script type="text/javascript">
+    function autoScroll(obj) {
+        $(obj).find("ul").animate({
+            marginTop: "-39px"
+        }, 500, function () {
+            $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+        })
+    }
+    $(function () {
+        setInterval('autoScroll(".maquee")', 2000);
+    })
+</script>
+</body>
+</html>
